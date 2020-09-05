@@ -1,7 +1,32 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <body>
         <h1>Hello World!</h1>
         <p>I'm surprised you are able to see this website :O</p>
     </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Flask Parent Template</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/template.css') }}">
+     
+ </head>
+ <body>
+    <header>
+      <div class="container">
+        <h1 class="logo"> My website is in Production xD </h1>
+        <strong><nav>
+          <ul class="menu">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about_me') }}">About</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+
+    
+ </body>
 </html>
