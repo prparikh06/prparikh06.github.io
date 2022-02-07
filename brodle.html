@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<head>
+	<title> Brodle Home Page</title>
+</head>
+
+<body style="color: #CBC7C7; background-color: #7C3C3C;">
+	<div id="main">
+		<h1>Welcome to Brodle (Wordle for the Bros)</h1>
+		<!-- Game Instructions -->
+		<p>The oracle has chosen their word. Start guessing!</p>
+
+		<!-- 6x5 grid of boxes -->
+		<!--  attempt 1 -->
+		<br>
+		<br> <input type="text" id="g00"
+			STYLE="color: rgb(0., 0., 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g01')"> <input type="text" id="g01"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g02')"> <input type="text" id="g02"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g03')"> <input type="text" id="g03"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g04')"> <input type="text" id="g04"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'check')">
+
+		<!--  attempt 2 -->
+		<br>
+		<br> <input type="text" id="g10"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g11')"> <input type="text" id="g11"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g12')"> <input type="text" id="g12"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g13')"> <input type="text" id="g13"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g14')"> <input type="text" id="g14"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'check')">
+
+		<!--  attempt 3 -->
+		<br>
+		<br> <input type="text" id="g20"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g21')"> <input type="text" id="g21"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g22')"> <input type="text" id="g22"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g23')"> <input type="text" id="g23"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g24')"> <input type="text" id="g24"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'check')">
+
+		<!--  attempt 4 -->
+		<br>
+		<br> <input type="text" id="g30"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g31')"> <input type="text" id="g31"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g32')"> <input type="text" id="g32"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g33')"> <input type="text" id="g33"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g34')"> <input type="text" id="g34"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'check')">
+
+		<!--  attempt 5 -->
+		<br>
+		<br> <input type="text" id="g40"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g41')"> <input type="text" id="g41"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g42')"> <input type="text" id="g42"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g43')"> <input type="text" id="g43"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g44')"> <input type="text" id="g44"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'check')">
+
+		<!--  attempt 6 -->
+		<br>
+		<br> <input type="text" id="g50"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g51')"> <input type="text" id="g51"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g52')"> <input type="text" id="g52"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g53')"> <input type="text" id="g53"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'g54')"> <input type="text" id="g54"
+			STYLE="color: rgb(0, 0, 0); font-weight: bold; background-color: #7C3C3C;"
+			name="word" required maxlength="1" size="1"
+			onkeyup="autotab(this, 'check')">
+
+		<!-- Grid end here  -->
+		<br>
+		<br>
+		<br>
+
+
+		<!--  Enter button - check guess here -->
+		<button id="check" type="button" onclick="checkInput()">
+			Check</button>
+
+
+	</div>
+	<script src="func.js"> </script>
+</body>
+
+</html>
