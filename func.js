@@ -1,7 +1,7 @@
 //globals to confirm attempt #
 var attempts = 0;
 
-var correctWord = "tears";
+var correctWord = "stars";
 
 window.onload = function() {
 	g00.value = ""; g01.value = ""; g02.value = ""; g03.value = ""; g04.value = "";
@@ -15,8 +15,10 @@ window.onload = function() {
 
 }
 
+// TODO BACKSPACE FUNCTIONALITY AND PREVENT USER FROM GOING TO NEXT ATTEMPT
+
 // function to auto move to next tab
-function autotab(field, next, checkAttempt) {
+function autotab(field, next) {
 	if (field.value.length >= 1) {
 		document.getElementById(next).focus();
 	}
@@ -55,12 +57,16 @@ function checkInput() {
 			break;
 	}
 
+	// TODO check if it is word. if Not, return a "try again" alert (do not increase attempts)
+	// this is done "server" side even though we don't have a server atm. http://androidtech.com/html/wordnet-mysql-20.php
+	
+
 
 	// char by char comparison
 	for (let i = 0; i < 5; i++) {
 		var inputNum = "g".concat(attempts.toString(), i.toString())
 		var inputVal = document.getElementById(inputNum);
-
+		
 		if (guess[i] == correctWord.charAt(i)) {
 			// GOOD - highlight green
 			inputVal.style.backgroundColor = "green";
@@ -71,9 +77,23 @@ function checkInput() {
 		}
 		else if (correctWord.indexOf(guess[i]) != -1) {
 			// EXISTS - highlight yellow
-			inputVal.style.backgroundColor = "#d9d47c";
+			
+			// TODO EXAMPLE: SSSSS 
+			// ALL WILL BE YELLOW EXCEPT FOR LAST ONE (GREEN). IF IT IS IN CORRECT SPOT, DO NOT HIGHLIGHT YELLOW (UNLESS ALSO EXISTS IN A DIFFERENT SPOT)
+			var correctIndex = correctWord.indexOf(guess[i]);
+			if (guess[correctIndex] == correctWord.charAt(correctIndex)){
+				// DO NOTHING, IT WILL BE MARKED GREEN
+				inputVal.style.backgroundColor = "gray";
+				continue			
+			}
+			
+			
+			else inputVal.style.backgroundColor = "#d9d47c";
+			
+			
+		
 		}
-		continue;
+			continue;
 	}
 	// analyze each guess -- put at end here because I wanted to highlight all of them green first hehe
 	if (guess.join('') == correctWord) {
