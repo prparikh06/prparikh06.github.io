@@ -103,7 +103,7 @@ function checkInput() {
 	attempts++;
 	// max attempts reached
 	if (attempts == 6) {
-		window.alert("you suck");
+		window.alert("try again next time!");
 	}
 	else
 		document.getElementById(next).focus();
